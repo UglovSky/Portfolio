@@ -1,0 +1,19 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+    <div class="forms">
+        <h1>Форма обратной связи</h1>
+        <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+        </form>
+    </div>
+    <div class = "wrapper">
+        <p>У Вас есть идея? Опишите ее,<br>
+            и я свяжусь с Вами в ближайшее время,<br>
+            чтобы обсуждения ее реализацию.</p>
+    </div>
+{% endblock %}

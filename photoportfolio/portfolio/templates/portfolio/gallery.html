@@ -1,0 +1,26 @@
+{% extends 'portfolio/layout.html' %}
+ {% load static %}
+
+{% block title %}Галерея{% endblock %}
+
+{% block content %}
+<div class="adaptivny_slayder">
+  <input type="radio" name="photos" id="photo1" checked>
+  <input type="radio" name="photos" id="photo2">
+  <input type="radio" name="photos" id="photo3">
+
+  <div class="photos">
+  <label for="photo1"></label>
+  <label for="photo2"></label>
+  <label for="photo3"></label>
+  </div>
+
+  <div class="adaptivny_slayder_lasekun">
+  <div class="photo_carousel">
+  <img src="{% static 'portfolio/img/photo1.jpg' %}"/>
+  <img src="{% static 'portfolio/img/photo2.jpg' %}"/>
+  <img src="{% static 'portfolio/img/photo3.jpg' %}"/>
+  </div>
+  </div>
+</div>
+{% endblock %}

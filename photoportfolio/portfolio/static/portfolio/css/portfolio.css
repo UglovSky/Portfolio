@@ -1,0 +1,139 @@
+body {
+    height: 100%;
+	background-color: #141313;
+	font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.img_main {
+	margin-top:  30px;
+	margin-left:  30px;
+	box-shadow: 10px 10px 15px rgba(235, 230, 230, 0.5);
+  	width: 100px;
+  	height: 100px;
+  	position: relative;
+}
+.main_info {
+	text-align: left;
+	margin-left: 700px;
+	width: 100%;
+  	height: 100%;
+  	position: absolute;
+	color: darkgray;
+}
+
+.nav-item, li {
+     padding-left: 50px;
+     font-size: 20px;
+}
+
+.adaptivny_slayder {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.adaptivny_slayder input[name="photos"] {
+  display: none;
+}
+
+.photos {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.photos label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+#photo1:checked~.photos label[for="photo1"] {
+  background-color: white;
+}
+
+#photo2:checked~.photos label[for="photo2"] {
+  background-color: white;
+}
+
+#photo3:checked~.photos label[for="photo3"] {
+  background-color: white;
+}
+
+.adaptivny_slayder_lasekun {
+  overflow: hidden;
+}
+
+.photo_carousel {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.photo_carousel img {
+  width: 100%;
+  flex-shrink:0;
+}
+
+#photo1:checked~adaptivny_slayder_asekun photo_carousel {
+  transform: translate(0);
+}
+
+#photo2:checked~.adaptivny_slayder_lasekun .photo_carousel {
+  transform: translateX(-100%);
+}
+
+#photo3:checked~.adaptivny_slayder_lasekun .photo_carousel {
+  transform: translateX(-200%);
+}
+
+form{
+    display: block;
+    position: fixed; top: 30%; left: 20%;
+    color:darkgray;
+}
+
+.forms{
+    text-align: center;
+    color: darkgray;
+}
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.wrapper{
+    color: darkgray;
+    margin-top: 200px;
+    margin-left: 900px;
+}
+
+ul{
+    color: darkgray;
+    list-style-type: none;
+    margin-left: 0px;
+}
+h1{
+    font-size: 40px;
+}
+footer {
+     color: darkgray;
+     position: fixed;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 position: fixed;
+  	 z-index: 10;
+	 width: 100%;
+	 height: 30px;
+	 text-align: center;
+}

@@ -1,0 +1,15 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block title %}Ваши предложения{% endblock %}
+
+{% block content %}
+   <h1>Ваши предложения</h1>
+{% for contact in contacts %}
+    <ul>
+        <li aria-current="true">Заявка № {{ contact.id }}</li>
+        <li>{{ contact.name }}</li>
+        <li>{{ contact.email }}</li>
+        <li>{{ contact.message }}</li>
+    </ul>
+{% endfor %}
+{% endblock %}
